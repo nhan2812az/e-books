@@ -10,3 +10,12 @@ vẽ sơ đồ bang PowerDesigner
 Vào trong thư mục muốn push bằng lệnh cd
 Push lại mã lên GitHub: Sau khi thực hiện commit, bạn có thể đẩy thay đổi lên GitHub:
 git push -u origin main
+
+Khi muốn update file mới lên với file chỉ định :
+git add tênfile
+
+Sau đó phải commit file trước khi push:
+git commit -m "ghi chú cho file"
+
+Trước khi push cần pull trước để tránh xung đột:
+git pull origin main (ở đây đang sử dụng branch main)
