@@ -1,0 +1,12 @@
+Cài đặt composer,PHP, React
+
+cd C:\Xampp-hoc\htdocs\e-books\frontend
+chạy lệnh : npm start để hiển thị frontend
+
+
+vẽ sơ đồ bang PowerDesigner
+
+
+Vào trong thư mục muốn push bằng lệnh cd
+Push lại mã lên GitHub: Sau khi thực hiện commit, bạn có thể đẩy thay đổi lên GitHub:
+git push -u origin main
