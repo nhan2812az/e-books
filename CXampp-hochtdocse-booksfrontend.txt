@@ -1,4 +1,4 @@
-Cài đặt composer,PHP, React
+Cài đặt composer,PHP, React, Git(nếu dùng máy net)
 
 cd C:\Xampp-hoc\htdocs\e-books\frontend
 chạy lệnh : npm start để hiển thị frontend
