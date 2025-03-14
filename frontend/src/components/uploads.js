@@ -1,3 +1,4 @@
+// src/components/UploadEbook.js
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -15,14 +16,19 @@ const UploadEbook = () => {
     formData.append("ebook", file);
 
     try {
-      const response = await axios.post("http://localhost:8000/api/upload", formData, {
+      const response = await axios.post("http://localhost:8000/api/books/uploads", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
       });
-      setMessage(response.data.message);
+      setMessage(response.data.message); // Hiển thị thông báo từ backend
     } catch (error) {
-      setMessage("Có lỗi xảy ra khi tải lên");
+      // Hiển thị lỗi chi tiết từ backend (nếu có)
+      if (error.response) {
+        setMessage(`Lỗi: ${error.response.data.error || error.response.data.message}`);
+      } else {
+        setMessage("Có lỗi xảy ra khi tải lên e-book.");
+      }
     }
   };
 
@@ -33,7 +39,7 @@ const UploadEbook = () => {
         <input type="file" onChange={handleFileChange} />
         <button type="submit">Tải lên</button>
       </form>
-      {message && <p>{message}</p>}
+      {message && <p>{message}</p>} {/* Hiển thị thông báo */}
     </div>
   );
 };
